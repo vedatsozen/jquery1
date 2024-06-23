@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITE 61</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    
+<div id="container">
+    <div id="left">
+       <img src="img1.jpg" class="thumbnail">
+       <img src="img2.jpg" class="thumbnail">
+       <img src="img3.jpg" class="thumbnail">
+       <img src="img4.jpg" class="thumbnail">
+       <img src="img5.jpg" class="thumbnail">
+    </div>
+    <div id="right">
+    <img id="rightimg" src="img1.jpg">
+    </div>
+    <button id="openclose">Open / Close Thumbnails</button>
+</div>
+
+<script>
+
+$(document).ready(function() {
+
+$(".thumbnail").click(function() {
+
+let thumbnailSrc = $(this).attr("src");
+
+$("#rightimg").attr("src", thumbnailSrc);
+})
+
+$("#openclose").click(function() {
+$("#left").toggleClass("closeme");
+$("#right").toggleClass("openme");
+})
+
+
+})
+
+</script>
+</body>
+</html>
